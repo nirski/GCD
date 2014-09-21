@@ -58,3 +58,5 @@ tidy.mean <- tidy.all %>%
     group_by(subject, activity.name, feature.name) %>%
     summarise(n.obs = n(), mean = mean(value)) %>%
     ungroup
+
+write.table(tidy.mean, "tidy_mean.txt", row.name = FALSE)
