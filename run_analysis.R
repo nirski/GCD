@@ -59,4 +59,5 @@ tidy.mean <- tidy.all %>%
     summarise(n.obs = n(), mean = mean(value)) %>%
     ungroup
 
+# Write the tidy data set into file
 write.table(tidy.mean, "tidy_mean.txt", row.name = FALSE)
