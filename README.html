@@ -57,34 +57,34 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <p>The script <code>run_analysis.R</code> performs the following steps, the scope being a tidy data set, according to the rules suggested in <a href="http://www.jstatsoft.org/v59/i10">Hadley Wickham’s tidy data paper</a>:</p>
 <ol style="list-style-type: decimal">
 <li>Reads the data sets, along with the dictionaries:
-<ol style="list-style-type: lower-alpha">
+<ul>
 <li><strong>subject</strong> variable: <code>UCI HAR Dataset/train/subject_train.txt</code> and <code>UCI HAR Dataset/test/subject_test.txt</code></li>
 <li><strong>activity</strong> variable: <code>UCI HAR Dataset/train/y_train.txt</code> and <code>UCI HAR Dataset/test/y_test.txt</code></li>
-<li><strong>feature</strong> measurments: <code>UCI HAR Dataset/train/X_train.txt</code> and <code>UCI HAR Dataset/test/X_test.txt</code></li>
+<li><strong>feature</strong> measurements: <code>UCI HAR Dataset/train/X_train.txt</code> and <code>UCI HAR Dataset/test/X_test.txt</code></li>
 <li>dictionaries: activities and features: <code>UCI HAR Dataset/activity_labels.txt</code> and <code>UCI HAR Dataset/features.txt</code></li>
-</ol></li>
+</ul></li>
 <li>Merges the training and the test sets to create one data set.
-<ol style="list-style-type: lower-alpha">
+<ul>
 <li>Merging colwise and rowwise.</li>
 <li>The resulting data frame <code>bound.all</code> has a wide format: 10299 observations od 563 variables (1 subject, 1 activity and 561 feature variables).</li>
 <li>The data is then converted to a long format <code>tidy.all</code> with 4 columns: subject, activity, feature id, and value.</li>
-</ol></li>
+</ul></li>
 <li>Extracts only the measurements on the mean and standard deviation for each measurement.
-<ol style="list-style-type: lower-alpha">
+<ul>
 <li>Out of 561 features, only 66 are selected. The filtered <code>tidy.all</code> data frame has 679734 rows and 4 columns.</li>
-</ol></li>
+</ul></li>
 <li>Uses descriptive activity names to name the activities in the data set.
-<ol style="list-style-type: lower-alpha">
+<ul>
 <li>The activities dictionary is used.</li>
-</ol></li>
+</ul></li>
 <li>Appropriately labels the data set with descriptive variable names.
-<ol style="list-style-type: lower-alpha">
+<ul>
 <li>Each feature gets a descriptive label from the features dictionary.</li>
-</ol></li>
+</ul></li>
 <li>From the data set in previous step, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-<ol style="list-style-type: lower-alpha">
+<ul>
 <li>The resulting data frame <code>tidy.mean</code> is eventually written to the file <code>tidy_mean.txt</code>.</li>
-</ol></li>
+</ul></li>
 </ol>
 </div>
 
